@@ -108,5 +108,4 @@ print(conf_matrix)
 print("\nClassification Report:")
 print(class_report)
 
-# Save the model
 torch.save(model.state_dict(), 'sign_language_model_70_15_15.pth')
