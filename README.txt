@@ -1,0 +1,1 @@
+clone-project -> pip install opencv-python ultralytics -> download torch according to ur cuda version here https://pytorch.org/get-started/locally/ -> run predict_webcam.py 

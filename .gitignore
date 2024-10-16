@@ -1,1 +1,7 @@
-ECHO is on.
+classification_dataset29
+classification_dataset36
+detection_dataset500
+detection_dataset2022
+classification_29classes.zip
+classification_36classes.zip
+yolo_dataset.zip
