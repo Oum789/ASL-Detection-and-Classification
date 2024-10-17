@@ -30,7 +30,7 @@ model = models.mobilenet_v2(pretrained=False)
 num_classes = 29  
 model.classifier[1] = torch.nn.Linear(model.last_channel, num_classes)
 
-model.load_state_dict(torch.load('sign_language_model_100_0_0.pth'))
+model.load_state_dict(torch.load('sign_language_model_epoch_19.pth'))
 
 
 model.eval()
@@ -67,7 +67,7 @@ while True:
             _, predicted_class = predictions.max(1)
 
             predicted_label = class_names[predicted_class.item()]
-            label = f'Class: {predicted_label}'
+            label = f'Class: Yolo {class_names[int(box.cls[0])]}, MobileNet {predicted_label}'
 
             cv2.rectangle(frame, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
             cv2.putText(frame, label, (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
